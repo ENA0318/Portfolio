@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta popover="og:title" content="PORTFOLIO">
+<meta popover="og:type" content="PORTFOLIO">
+<meta popover="og:description" content="Ah Hyun's PORTFOLIO">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="icon" href="images/logo-07.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrap">
+
+<!-- ── 헤더: 로고 + 태그라인 ── -->
+<header>
+	<div class="header-bg"></div>
+	<div class="logo-wrap">
+		<img src="images/logo.png" alt="Portfolio logo">
+		<div class="logo-tagline">
+			<div class="tagline-row"><span class="dot-yellow"></span>밝고 따뜻한 시선으로</div>
+			<div class="tagline-row"><span class="dot-blue"></span>차분한 신뢰를 보여주다 —</div>
+		</div>
+	</div>
+</header>
+
+<!-- ── 네비게이션 ── -->
+<section class="nav">
+	<div class="nav-box">
+		<div class="nav-pill1">
+			<div class="minilogo" style="cursor:pointer;" onclick="window.scrollTo({top:0,behavior:'smooth'})"><img src="images/logo-06.png" alt="미니 로고"></div>
+			<a href="#resumeSection">About</a>
+			<a href="#section-W">Work</a>
+		</div>
+	</div>
+</section>
+
+<!-- ── 이력서 ── -->
+<section class="resume" id="resumeSection">
+	<div id="resumeBlock">
+		<div class="resume-inner"><img src="images/portfolio.svg" alt="Resume"></div>
+	</div>
+	<div class="toggle-bar up" id="toggleBar" role="button" tabindex="0" aria-label="이력서 접기/펼치기">
+		<span class="chev"><i class="fa-solid fa-angle-down"></i></span>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 W : Web Design ═══════ -->
+<section class="section-work" id="section-W">
+	<span class="section-label">Web Design</span>
+	<nav class="category-nav">
+		<button class="category-btn active" onclick="scrollToSection('W')">W</button>
+		<button class="category-btn"        onclick="scrollToSection('A')">A</button>
+		<button class="category-btn"        onclick="scrollToSection('G')">G</button>
+		<button class="category-btn"        onclick="scrollToSection('B')">B</button>
+		<button class="category-btn"        onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn"        onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="work-layout">
+		<div class="work-left">
+			<div class="mockup-area">
+				<div class="pc-mockup" id="pc-W">
+					<img src="images/Display2.png" alt="PC" class="device-frame">
+					<div class="pc-screen" id="pcScreen-W">
+						<div class="screen-loader hidden" id="pcLoader-W"></div>
+						<img src="images/A.N uiux (1).png" alt="" id="pcImg-W">
+					</div>
+				</div>
+				<div class="mobile-mockup" id="mobile-W">
+					<img src="images/Samsung Galaxy S9.png" alt="Mobile" class="device-frame">
+					<div class="mobile-screen" id="mobileScreen-W">
+						<div class="screen-loader hidden" id="mobileLoader-W"></div>
+						<img src="images/A.N uiux (1).png" alt="" id="mobileImg-W" style="border-radius:10px;">
+					</div>
+				</div>
+			</div>
+			<div class="view-toggle" id="viewToggle-W">
+				<button class="view-btn active" data-section="W" data-view="web">View Web</button>
+				<button class="view-btn"        data-section="W" data-view="app">View App</button>
+				<button class="view-btn btn-website is-hidden" id="btnWebsite-W" data-section="W">Website</button>
+				<div class="toggle-spacer"></div>
+				<button class="view-btn btn-plan" data-section="W" data-plan="pdf/plan-an.pdf">기획서</button>
+			</div>
+			<div class="project-info" id="info-W">
+				<div class="project-text">
+					<div class="project-title" id="title-W">A:N 웹사이트</div>
+					<div class="project-desc" id="desc-W">럭셔리 호텔 체인의 아이덴티티로 휴식의 시간을 담은, 음악 감상공간 브랜드 웹사이트. 고급스러운 인테리어 감성을 웹으로 옮긴 풀스크린 레이아웃으로 구성했습니다.</div>
+					<div class="project-period" id="period-W">2026.04 — 2026.04 · 14일 · 기여도100%</div>
+				</div>
+				<div class="tool-icons" id="tools-W"></div>
+			</div>
+		</div>
+		<div class="work-right">
+			<div class="scroll-container">
+				<div class="scroll-list" id="list-W">
+					<div class="project-card active" data-section="W" data-pc-img="images/A.N uiux (1).png" data-mobile-img="images/A.N uiux (1).png" data-tools="Illustrator,Code,ChatGPT" data-title="A:N 웹사이트" data-desc="럭셔리 호텔 체인의 아이덴티티로 휴식의 시간을 담은, 음악 감상공간 브랜드 웹사이트. 고급스러운 인테리어 감성을 웹으로 옮긴 풀스크린 레이아웃으로 구성했습니다." data-period="2026.04 — 2026.04 · 14일 · 기여도100%" data-plan="pdf/plan-an.pdf">
+						<div class="card-inner" style="background-image: url('images/A.N uiux.png');">A:N Rest area</div>
+					</div>
+					<div class="project-card" data-section="W" data-pc-img="images/Seoul Museum of Art (1).png" data-mobile-img="images/Seoul Museum of Art (1).png" data-live-url="https://ena0318.github.io/SEOUL-MUSEUM-OF-ART/" data-tools="Illustrator,Code,ChatGPT" data-title="서울시립미술관 리디자인" data-desc="국내 미술관의 전시 정보와 컬렉션을 소개하는 반응형 웹사이트. 사용자 중심의 탐색 흐름과 시각적 아트워크 전시에 초점을 맞추었습니다." data-period="2026.04 — 2026.04 · 10일 · 기여도100%" data-plan="pdf/plan-museum.pdf">
+						<div class="card-inner" style="background-image: url('images/Seoul Museum of Art.png');">갤러리 뮤지엄</div>
+					</div>
+					<div class="project-card" data-section="W" data-pc-img="images/IaCAD (4).png" data-mobile-img="images/IaCAD (4).png" data-tools="Illustrator,Code" data-title="정보통신보조기기 리디자인" data-desc="기존 사이트의 UX 개선을 목표로 한 전면 리뉴얼 프로젝트. 카테고리 탐색 최적화 및 전환율 향상에 중점." data-period="2026.03 — 2026.04 · 5일 · 기여도100%" data-plan="pdf/plan-iacad.pdf">
+						<div class="card-inner" style="background-image: url('images/IaCAD (4).png');">정보통신보조기기</div>
+					</div>
+					<div class="project-card" data-section="W" data-pc-img="images/the Venti (1).jpg" data-mobile-img="images/the Venti (2).jpg" data-tools="Photoshop,Illustrator" data-title="더벤티 리디자인" data-desc="기존 사이트의 UX 개선을 목표로 한 전면 리뉴얼 프로젝트. 카테고리 탐색 최적화 및 전환율 향상에 중점." data-period="2026.03 — 2026.03 · 7일 · 기여도80%" data-plan="pdf/plan-venti.pdf" data-team="true">
+						<div class="card-inner" style="background-image: url('images/the Venti (1).jpg');">the Venti</div>
+					</div>
+					<div class="project-card" data-section="W" data-mobile-only="true" data-mobile-img="images/Le Mouton.jpg" data-tools="Photoshop" data-title="르무통 리디자인" data-desc="기존 쇼핑몰의 UX 개선을 목표로 한 전면 리뉴얼 프로젝트. 카테고리 탐색 최적화 및 전환율 향상에 중점." data-period="2026.02 — 2026.02 · 3일 · 기여도100%">
+						<div class="card-inner" style="background-image: url('images/Le Mouton (1).jpg');">Le Mouton</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 A : Application ═══════ -->
+<section class="section-work" id="section-A">
+	<span class="section-label">Application</span>
+	<nav class="category-nav">
+		<button class="category-btn"        onclick="scrollToSection('W')">W</button>
+		<button class="category-btn active" onclick="scrollToSection('A')">A</button>
+		<button class="category-btn"        onclick="scrollToSection('G')">G</button>
+		<button class="category-btn"        onclick="scrollToSection('B')">B</button>
+		<button class="category-btn"        onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn"        onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="app-layout">
+		<div class="app-carousel">
+			<button class="app-arrow" id="appPrev"><i class="fa-solid fa-chevron-left"></i></button>
+			<div class="app-phone">
+				<img src="images/Samsung Galaxy S9.png" alt="" class="device-frame">
+				<div class="app-phone-screen" id="appScreen">
+					<img src="images/onbom- (1).png" alt="" id="appScreenImg">
+					<div class="phone-tap-left"  id="phoneTapLeft"></div>
+					<div class="phone-tap-right" id="phoneTapRight"></div>
+					<div class="phone-counter" id="phoneCounter">1 / 1</div>
+				</div>
+			</div>
+			<div class="app-right-area">
+				<button class="app-arrow" id="appNext"><i class="fa-solid fa-chevron-right"></i></button>
+				<div class="app-plan-wrap">
+					<button class="view-btn btn-viewapp" id="appViewBtn">View App</button>
+					<button class="view-btn btn-plan" id="appPlanBtn">기획서</button>
+				</div>
+			</div>
+		</div>
+		<div class="app-dots" id="appDots">
+			<div class="app-dot active"></div>
+			<div class="app-dot"></div>
+			<div class="app-dot"></div>
+		</div>
+		<div class="app-info">
+			<div class="app-title-row">
+				<div class="title-left" id="titleLeftA"></div>
+				<div class="project-title" id="title-A">온봄</div>
+				<div class="tool-icons" id="tools-A"></div>
+			</div>
+			<div class="project-tagline" id="tagline-A">세상의 모든 온기를 당신의 아이에게</div>
+			<div class="project-desc" id="desc-A">반려동물의 전반적인 케어를 할 수 있는 어플리케이션.</div>
+			<div class="project-period" id="period-A">2026.03 — 2026.03 · 9일 · 기여도100%</div>
+		</div>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 G : Graphic ═══════
+     ★ data-images : 모달에 보여줄 이미지 경로 (쉼표 구분)
+     ★ data-mode   : "flip" = 넘기기 | "all" = 한번에 전부 표시
+     ★ 파일명은 실제 이미지에 맞게 수정하세요
+═══════ -->
+<section class="section-work" id="section-G">
+	<span class="section-label">Graphic</span>
+	<nav class="category-nav">
+		<button class="category-btn"        onclick="scrollToSection('W')">W</button>
+		<button class="category-btn"        onclick="scrollToSection('A')">A</button>
+		<button class="category-btn active" onclick="scrollToSection('G')">G</button>
+		<button class="category-btn"        onclick="scrollToSection('B')">B</button>
+		<button class="category-btn"        onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn"        onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="gallery-grid gallery-mixed">
+		<!-- 카드1: 동화책 Mfire — 24장 넘기기 -->
+		<div class="gallery-card card-large"
+			data-mode="flip"
+			data-images="images/Mfire (1).png,images/Mfire (2).png,images/Mfire (3).png,images/Mfire (4).png,images/Mfire (5).png,images/Mfire (6).png,images/Mfire (7).png,images/Mfire (8).png,images/Mfire (9).png,images/Mfire (10).png,images/Mfire (11).png,images/Mfire (12).png,images/Mfire (13).png,images/Mfire (14).png,images/Mfire (15).png,images/Mfire (16).png,images/Mfire (17).png,images/Mfire (18).png,images/Mfire (19).png,images/Mfire (20).png,images/Mfire (21).png,images/Mfire (22).png,images/Mfire (23).png,images/Mfire (24).png">
+			<span class="card-label">모닥이는 화르륵 동화책 제작</span>
+			<span class="card-sublabel">Open Book →</span>
+			<img src="images/Mfire.png" alt="동화책">
+		</div>
+		<!-- 카드2: sksk — 3장 넘기기 -->
+		<div class="gallery-card"
+			data-mode="flip"
+			data-images="images/sksk (1).png,images/sksk (2).png,images/sksk (3).png">
+			<span class="card-label">사각사각 비쥬얼 아트북 제작</span>
+			<span class="card-sublabel">Open View→</span>
+			<img src="images/sksk.png" alt="">
+		</div>
+		<!-- 카드3: 달력 — 3장 한번에 전부 표시 -->
+		<div class="gallery-card"
+			data-mode="all"
+			data-images="images/MOON CALENDER_2021.png,images/MOON CALENDER-2025 (1).png,images/MOON CALENDER-2025 (2).png">
+			<span class="card-label">달의 위상 달력 포스터</span>
+			<span class="card-sublabel">Open View→</span>
+			<img src="images/MOON CALENDER-2025 (1).png" alt="">
+		</div>
+		<!-- 카드4~6: 이미지 1장짜리 (클릭하면 확대) -->
+		<div class="gallery-card" data-mode="flip" data-images="images/52.png">
+			<span class="card-label">이오의 허세라이프 이모티콘</span>
+			<span class="card-sublabel">Open View→</span>
+			<img src="images/52.png" alt="">
+		</div>
+		<div class="gallery-card" data-mode="all"
+			data-images="images/co (3).png,images/co (4).png,images/co (2).png">
+			<span class="card-label">폰트 비주얼 아트</span>
+			<span class="card-sublabel">Open View→</span>
+			<img src="images/co (1).png" alt="">
+		</div>
+		<div class="gallery-card" data-mode="scroll" data-images="images/AHG-3.png">
+			<span class="card-label">전기신문 웹툰부분 공모전</span>
+			<span class="card-sublabel">Open View→</span>
+			<img src="images/AHG-3.png" alt="" style="object-position:top;">
+		</div>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 B : Branding ═══════ -->
+<section class="section-work" id="section-B">
+	<span class="section-label">Branding</span>
+	<nav class="category-nav">
+		<button class="category-btn"        onclick="scrollToSection('W')">W</button>
+		<button class="category-btn"        onclick="scrollToSection('A')">A</button>
+		<button class="category-btn"        onclick="scrollToSection('G')">G</button>
+		<button class="category-btn active" onclick="scrollToSection('B')">B</button>
+		<button class="category-btn"        onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn"        onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="gallery-grid gallery-square">
+		<div class="gallery-card" data-mode="flip" data-images="images/fluvia (4).png"><span class="card-label">fluvia 브랜드 디자인</span><span class="card-sublabel">Open View→</span><img src="images/fluvia (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/Latte is horse (2).png"><span class="card-label">라떼는 말이야 로고 디자인</span><span class="card-sublabel">Open View→</span><img src="images/Latte is horse (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/A.N (2).png"><span class="card-label">A:N 브랜드 디자인</span><span class="card-sublabel">Open View→</span><img src="images/A.N (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/morningglory (2).png,images/morningglory (3).png"><span class="card-label">morningglory 로고 리디자인</span><span class="card-sublabel">Open View→</span><img src="images/morningglory (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/Smoothly (2).png,images/Smoothly (3).png"><span class="card-label">누긋나긋 브랜드 디자인</span><span class="card-sublabel">Open View→</span><img src="images/Smoothly (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/yakssok (2).png"><span class="card-label">약쏙 로고 디자인</span><span class="card-sublabel">Open View→</span><img src="images/yakssok (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/onbom.png"><span class="card-label">온봄 로고 디자인</span><span class="card-sublabel">Open View→</span><img src="images/onbom.png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/sksk (4).png"><span class="card-label">사각사각 브랜드 디자인</span><span class="card-sublabel">Open View→</span><img src="images/sksk (4).png" alt=""></div>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 Ad : Advertising ═══════ -->
+<section class="section-work" id="section-Ad">
+	<span class="section-label">Advertising</span>
+	<nav class="category-nav">
+		<button class="category-btn"        onclick="scrollToSection('W')">W</button>
+		<button class="category-btn"        onclick="scrollToSection('A')">A</button>
+		<button class="category-btn"        onclick="scrollToSection('G')">G</button>
+		<button class="category-btn"        onclick="scrollToSection('B')">B</button>
+		<button class="category-btn active" onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn"        onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="gallery-grid gallery-mixed">
+		<div class="gallery-card card-large" data-mode="flip-all" data-group="2" data-images="images/EverydayCracker (1).png,images/EverydayCracker (2).png,images/EverydayCracker (3).png,images/EverydayCracker (4).png"><span class="card-label">EverydayCracker 인스타툰 광고 디자인</span><span class="card-sublabel">Open View→</span><img src="images/EverydayCracker (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/advertising poster (2).png"><span class="card-label">VARRAM 제품 광고 포스터</span><span class="card-sublabel">Open View→</span><img src="images/advertising poster (2).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/advertising poster (1).png"><span class="card-label">광동제약 제품 광고 포스터</span><span class="card-sublabel">Open View→</span><img src="images/advertising poster (1).png" alt=""></div>
+		<div class="gallery-card" data-mode="all" data-images="images/advertising poster (3).png,images/advertising poster (4).png"><span class="card-label">OralB 제품 광고 포스터</span><span class="card-sublabel">Open View→</span><img src="images/advertising poster (3).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images="images/card news.png"><span class="card-label">HAPPYMOONDAY 인스타 카드뉴스</span><span class="card-sublabel">Open View→</span><img src="images/card news.png" alt=""></div>
+	</div>
+</section>
+
+<!-- ═══════ 섹션 P : Product ═══════ -->
+<section class="section-work" id="section-P">
+	<span class="section-label">Product</span>
+	<nav class="category-nav">
+		<button class="category-btn"        onclick="scrollToSection('W')">W</button>
+		<button class="category-btn"        onclick="scrollToSection('A')">A</button>
+		<button class="category-btn"        onclick="scrollToSection('G')">G</button>
+		<button class="category-btn"        onclick="scrollToSection('B')">B</button>
+		<button class="category-btn"        onclick="scrollToSection('Ad')">Ad</button>
+		<button class="category-btn active" onclick="scrollToSection('P')">P</button>
+	</nav>
+	<div class="gallery-grid gallery-product">
+		<div class="gallery-card card-large" data-mode="flip" data-images=""><img src="images/LUSH (1).png" alt=""><span class="card-label">LUSH 제품 패키지 디자인</span></div>
+		<div class="gallery-card" data-mode="flip" data-images=""><img src="images/LUSH (2).png" alt=""></div>
+		<div class="gallery-card" data-mode="flip" data-images=""><img src="images/LUSH (3).png" alt=""></div>
+	</div>
+</section>
+
+</div>
+
+<!-- ── 푸터 ── -->
+<footer class="footer">
+	<!-- 손글씨 배경 이미지 (파일 준비 후 src 교체) -->
+	<img class="footer-handwriting" src="images/footr-logo.png" alt="">
+	<div class="footer-content">
+		<button class="footer-email" id="copyEmail" type="button">a_3108@naver.com</button>
+		<div class="footer-sns">
+			<a href="#"><img src="images/behance.png" alt="Behance"></a>
+			<a href="#"><img src="images/social_x.png" alt="X"></a>
+			<a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+			<a href="#"><img src="images/discord.png" alt="Discord"></a>
+		</div>
+		<p class="footer-copyright">COPYRIGHT© by AHYEON PORTFOLIO. ALL RIGHTS RESERVED.</p>
+	</div>
+</footer>
+
+<!-- ── 모달 (작품 상세 보기) ── -->
+<div class="modal-overlay is-hidden" id="modal">
+	<button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+	<button class="modal-arrow left"  id="modalPrev"><i class="fa-solid fa-chevron-left"></i></button>
+	<button class="modal-arrow right" id="modalNext"><i class="fa-solid fa-chevron-right"></i></button>
+	<div class="modal-counter" id="modalCounter">1 / 1</div>
+	<!-- flip 모드용 이미지 -->
+	<img class="modal-flip-img is-hidden" id="modalFlipImg" src="" alt="">
+	<!-- all 모드용 래퍼 -->
+	<div class="modal-all-wrap is-hidden" id="modalAllWrap"></div>
+	<!-- scroll 모드용 래퍼 -->
+	<div class="modal-scroll-wrap is-hidden" id="modalScrollWrap"></div>
+</div>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
