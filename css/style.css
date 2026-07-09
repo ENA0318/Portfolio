@@ -3,9 +3,10 @@
 /* ── 0. 리셋 & 유틸리티 ── */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 a { text-decoration: none; color: #222; }
-@font-face { font-family: VITRO CORE; src: url(../../font/Vitro/VITRO\ CORE\ OTF.otf); }
-@font-face { font-family: VITRO PRIDE; src: url(../../font/Vitro/VITRO\ PRIDE\ OTF.otf); }
-body { font-family: "VITRO PRIDE", 'Noto Sans KR', 'Inter'; font-size: 18px; scroll-behavior: smooth; }
+@font-face { font-family: "VITRO CORE"; src: url(../../font/Vitro/VITRO\ CORE\ OTF.otf); }
+@font-face { font-family: "VITRO PRIDE"; src: url(../../font/Vitro/VITRO\ PRIDE\ OTF.otf); }
+html { overflow-x: hidden; }
+body { font-family: "VITRO PRIDE", 'Noto Sans KR', 'Inter'; font-size: 18px; scroll-behavior: smooth; overflow-x: hidden; }
 .wrap { max-width: 1440px; margin: 0 auto; padding: 0 24px; }
 .is-hidden { display: none !important; }
 .fade-out { opacity: 0 !important; }
@@ -107,7 +108,7 @@ header { width: 100%; height: 1024px; }
 .screen-loader.hidden { display: none; }
 
 /* ── 9. 전환 버튼 & 프로젝트 정보 ── */
-.view-toggle { display: flex; gap: 8px; align-items: center; }
+.view-toggle { display: flex; gap: 8px; align-items: center; min-height: 38px; }
 .view-toggle .toggle-spacer { flex: 1; }
 .view-btn { padding: 7px 20px; border-radius: 24px; border: 1.5px solid #d0cdca; font-size: 15px;
 	font-weight: 600; color: #525252; cursor: pointer; background: transparent; transition: all 0.2s; }
@@ -116,15 +117,15 @@ header { width: 100%; height: 1024px; }
 .view-btn.btn-plan:hover { background: #E8C832; border-color: #E8C832; color: #fff; }
 .view-btn.btn-website { color: #4A6FA5; border-color: #4A6FA5; }
 .view-btn.btn-website:hover { background: #4A6FA5; color: #fff; border-color: #4A6FA5; }
-.project-info { margin-top: 24px; padding-top: 22px; border-top: 1px solid #ddd;
-	display: flex; gap: 130px; align-items: flex-start; }
-.project-text { width: 600px; flex-shrink: 0; }
+.project-info { margin-top: 20px; padding-top: 18px; border-top: 1px solid #ddd;
+	display: flex; gap: 100px; align-items: flex-start; }
+.project-text { width: 630px; flex-shrink: 0; }
 .tool-icons { display: flex; flex-direction: column; gap: 4px; width: 100px; flex-shrink: 0;
 	align-items: flex-end; transition: opacity 0.25s; margin-bottom: 0; }
 .tool-icon { font-size: 14px; font-weight: 600; color: #7a7a7a; letter-spacing: 0.3px; white-space: nowrap; }
 .project-title { font-size: 26px; font-weight: 800; margin-bottom: 6px; transition: opacity 0.25s; }
 .project-tagline { font-size: 14px; color: #888; font-weight: 500; margin-bottom: 20px; transition: opacity 0.25s; font-style: italic; }
-.project-desc { font-size: 18px; color: #575757; line-height: 1.4; margin-bottom: 8px; transition: opacity 0.25s; }
+.project-desc { font-size: 18px; color: #575757; line-height: 1.4; margin-bottom: 8px; transition: opacity 0.25s; min-height: 76px; }
 .project-period { font-size: 15px; color: #787878; font-weight: 500; transition: opacity 0.25s; }
 .team-badge { display: inline-block; font-family: 'Noto Sans KR', sans-serif; font-size: 12px; font-weight: 700; color: #4A6FA5;
 	background: rgba(74,111,165,0.1); padding: 3px 10px; border-radius: 10px; vertical-align: middle; letter-spacing: 0.3px; }
@@ -176,7 +177,7 @@ header { width: 100%; height: 1024px; }
 .app-info .tool-icons { flex-direction: row; gap: 14px; width: auto; align-items: center; flex-wrap: wrap; }
 .app-info .tool-icon { font-size: 14px; font-weight: 600; color: #7a7a7a; letter-spacing: 0.3px; }
 .app-info .project-tagline { font-size: 15px; }
-.app-info .project-desc { font-size: 17px; color: #575757; line-height: 1.4; }
+.app-info .project-desc { font-size: 17px; color: #575757; line-height: 1.4; max-width: 580px; margin: 0 auto; }
 .app-info .project-period { font-size: 14px; }
 .app-right-area { width: 48px; flex-shrink: 0; display: flex; flex-direction: column;
 	align-items: flex-start; align-self: stretch; justify-content: center; position: relative; }
@@ -249,7 +250,7 @@ header { width: 100%; height: 1024px; }
 .modal-all-wrap.single img { max-width: 85vw; max-height: 82vh; }
 
 /* ── 14. 푸터 ── */
-.footer { width: 100%; background: #3163AB; position: relative; overflow: hidden; padding: 90px 370px 70px; min-height: 385px;
+.footer { width: 100%; background: #3163AB; position: relative; overflow: hidden; padding: 90px 100px 70px; min-height: 385px;
 	display: flex; align-items: center; justify-content: flex-end; }
 .footer-handwriting { position: absolute; left: 0px; top: 60%; transform: translateY(-50%);
 	height: 80%; width: auto; opacity: 0.25; pointer-events: none; user-select: none; }
@@ -267,7 +268,7 @@ header { width: 100%; height: 1024px; }
 	transition: transform 0.2s, opacity 0.2s; opacity: 0.6; }
 .footer-sns a:hover { transform: scale(1.1); opacity: 1; }
 .footer-sns img { width: 51px; height: 51px; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.6; }
-.footer-copyright { color: rgba(255,255,255,0.5); font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase;}
+.footer-copyright { width: 600px; color: rgba(255,255,255,0.5); font-size: 12px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; /* text-align: center; */}
 
 /* scroll 모드: 큰 이미지 스크롤 */
 .modal-scroll-wrap { width: 25vw; max-height: 82vh; overflow-y: auto; overflow-x: hidden;
