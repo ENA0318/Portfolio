@@ -46,7 +46,12 @@ function renderTools(id, str) {
 }
 renderTools('tools-W', 'Illustrator,Code,ChatGPT');
 var initCard = document.querySelector('#list-W .project-card.active');
-if (initCard) { var wb = document.getElementById('btnWebsite-W'); if (wb) { var hasCode = (initCard.getAttribute('data-tools') || '').indexOf('Code') !== -1; wb.classList.toggle('is-hidden', !hasCode); } }
+if (initCard) {
+	var wb = document.getElementById('btnWebsite-W');
+	if (wb) { var hasCode = (initCard.getAttribute('data-tools') || '').indexOf('Code') !== -1; wb.classList.toggle('is-hidden', !hasCode); }
+	var initLiveUrl = initCard.getAttribute('data-live-url');
+	if (initLiveUrl) setTimeout(function() { setScreenMode('iframe-web', initLiveUrl); }, 100);
+}
 
 /* ── 5. 텍스트 페이드 교체 ── */
 function fadeText(ids, vals) {
@@ -187,19 +192,19 @@ var APP_DATA = [
 	{	screens: ['images/onbom- (1).png','images/onbom- (2).png','images/onbom- (3).png','images/onbom- (4).png','images/onbom- (5).png','images/onbom- (7).png','images/onbom- (8).png','images/onbom- (9).png','images/onbom- (10).png','images/onbom- (11).png','images/onbom- (12).png','images/onbom- (13).png'],
 		tools:'Illustrator,Figma', title:'온봄', tagline:'세상의 모든 온기를 당신의 아이에게',
 		desc:'산책 경로 추적, 동반 가능 장소 탐색, 건강 기록 등 반려동물을 위한 종합 케어 앱 "온봄"의 UI/UX 기획 프로젝트입니다. 체계적인 알림과 맞춤형 케어 다이어리를 통해 보호자의 관리 부담을 줄이고, 보다 세심한 돌봄을 지원하는 직관적인 경험을 설계했습니다.',
-		period:'2026.03 — 2026.03 · 9일 · 기여도100%', plan:'pdf/plan-onbom.pdf',
+		period:'2026.03 — 2026.03 · 9일 · 개인작업물', plan:'pdf/plan-onbom.pdf',
 		figma:'https://www.figma.com/proto/u0AMR61Ko2Cpsy7vVJsPDY/%EC%98%A8%EB%B4%84-%EC%96%B4%ED%94%8C%EB%A6%AC%EC%BC%80%EC%9D%B4%EC%85%98?node-id=1-2059&p=f&t=bVCk7MR28El86Ipa-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2059'
 	},
 	{	screens: ['images/yakssok_ (1).png','images/yakssok_ (2).png','images/yakssok_ (3).png','images/yakssok_ (4).png','images/yakssok_ (5).png','images/yakssok_ (6).png','images/yakssok_ (7).png','images/yakssok_ (8).png','images/yakssok_ (9).png','images/yakssok_ (10).png','images/yakssok_ (11).png','images/yakssok_ (12).png','images/yakssok_ (13).png','images/yakssok_ (14).png','images/yakssok_ (15).png','images/yakssok_ (16).png','images/yakssok_ (17).png','images/yakssok_ (18).png','images/yakssok_ (19).png','images/yakssok_ (20).png','images/yakssok_ (21).png','images/yakssok_ (22).png','images/yakssok_ (23).png','images/yakssok_ (24).png'],
 		tools:'Illustrator,Figma', title:'약쏙', tagline:'건강과 함께하는 작은 기적의 약속', team:true,
 		desc:'가족의 복약 일정을 공유하고 약품 간 상성을 안전하게 검사할 수 있는 맞춤형 복약 관리 앱 "약쏙"의 UI/UX 프로젝트입니다. 맞춤형 알람 설정부터 주변 약국 픽업 및 온라인 구매까지 약품 이용의 전 과정을 하나의 앱으로 통합하여 사용자의 편의성을 극대화했습니다.',
-		period:'2026.05 — 2026.05 · 12일 · 기여도70%', plan:'pdf/plan-yakssok.pdf',
+		period:'2026.05 — 2026.05 · 12일 · 기여도60%', plan:'pdf/plan-yakssok.pdf',
 		figma:'https://www.figma.com/proto/UdYnXE2Iz0YXGDkzLbGUIR/%EC%95%BD%EC%8F%99?node-id=12-7&viewport=877%2C-35%2C0.06&t=x4dbVwg6b7qWcgey-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=12%3A7&show-proto-sidebar=1&page-id=0%3A1'
 	},
 	{	screens: ['images/latte_ (1).png','images/latte_ (2).png','images/latte_ (3).png','images/latte_ (4).png','images/latte_ (5).png','images/latte_ (6).png','images/latte_ (7).png','images/latte_ (8).png','images/latte_ (9).png','images/latte_ (10).png','images/latte_ (11).png','images/latte_ (12).png','images/latte_ (13).png','images/latte_ (14).png','images/latte_ (15).png','images/latte_ (16).png','images/latte_ (17).png','images/latte_ (18).png'],
 		tools:'Illustrator,Figma', title:'라떼는 말이야', tagline:'',
 		desc:'아재개그를 즐기고 공유할 수 있는 커뮤니티 및 퀴즈 앱 "라떼는 말이야"의 UI/UX 기획 프로젝트입니다. 공감대 형성, 타임어택 퀴즈, 1:1 개그 배틀, 6각형 능력치 시스템 등 재치 있는 기능들로 설계했습니다.',
-		period:'2026.05 — 2026.06 · 17일 · 기여도100%', plan:'pdf/plan-latte.pdf',
+		period:'2026.05 — 2026.06 · 17일 · 개인작업물', plan:'pdf/plan-latte.pdf',
 		figma:'https://www.figma.com/proto/ZUNzA2gbaiW066J0bJMhkF/%EB%9D%BC%EB%96%BC%EB%8A%94%EB%A7%90%EC%9D%B4%EB%8B%A4--%EB%B3%B5%EC%82%AC-?node-id=236-3013&viewport=-350%2C-4%2C0.14&t=dj1XclRVsANKWTVW-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=236%3A3013&show-proto-sidebar=1&page-id=0%3A1'
 	}
 ];
