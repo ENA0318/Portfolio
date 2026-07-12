@@ -28,7 +28,7 @@ toggleBar.addEventListener('keydown', function(e) {
 /* ── 4. 툴 아이콘 ── */
 var TOOL_MAP = {
 	'Illustrator':'Illustrator', 'Photoshop':'Photoshop', 'Figma':'Figma',
-	'Code':'HTML / CSS / JS', 'ChatGPT':'ChatGPT', 'GSAP':'GSAP', 'XD':'Adobe XD'
+	'Code':'HTML / CSS / JS', 'Claude':'Claude', 'ChatGPT':'ChatGPT', 'GSAP':'GSAP', 'XD':'Adobe XD'
 };
 function renderTools(id, str) {
 	var box = document.getElementById(id);
@@ -44,7 +44,7 @@ function renderTools(id, str) {
 		box.classList.remove('fade-out');
 	}, 150);
 }
-renderTools('tools-W', 'Illustrator,Code,ChatGPT');
+renderTools('tools-W', 'Illustrator,Code,Claude,ChatGPT');
 var initCard = document.querySelector('#list-W .project-card.active');
 if (initCard) {
 	var wb = document.getElementById('btnWebsite-W');
@@ -151,13 +151,20 @@ var CARD_STEP = 210;
 	var list = document.getElementById('list-W');
 	if (!list) return;
 	var cards = list.querySelectorAll('.project-card'), total = cards.length, idx = 0, busy = false;
+	function isHorizontal() { return window.innerWidth <= 1024; }
 	function pick(i) {
 		if (i < 0) i = 0;  if (i > total - 1) i = total - 1;
 		idx = i;
-		list.scrollTo({ top: idx * CARD_STEP, behavior: 'smooth' });
+		if (isHorizontal()) {
+			var card = cards[idx];
+			list.scrollTo({ left: card.offsetLeft - list.offsetLeft, behavior: 'smooth' });
+		} else {
+			list.scrollTo({ top: idx * CARD_STEP, behavior: 'smooth' });
+		}
 		cards.forEach(function(c, j) { c.classList.toggle('active', j === idx); if (j === idx) changeScreenW(c); });
 	}
 	list.addEventListener('wheel', function(e) {
+		if (isHorizontal()) return;
 		e.preventDefault();
 		if (busy) return; busy = true;
 		pick(idx + (e.deltaY > 0 ? 1 : -1));
